@@ -1,0 +1,107 @@
+/* Estilos gerais */
+.aluno-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28a745;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+header h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+header img {
+  height: 40px;
+  width: auto;
+}
+
+/* Botão de Incluir Novo Aluno */
+button.btn-success {
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-success:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a tabela */
+.table {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.table thead {
+  background-color: #28a745;
+  color: white;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+.table button {
+  margin: 5px;
+}
+
+/* Modal */
+.modal-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer .btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+.modal-footer .btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+/* Inputs dentro dos modais */
+.modal-body .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal-body input {
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Texto dentro do Modal */
+.modal-body {
+  font-size: 1.1em;
+}
