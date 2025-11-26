@@ -59,12 +59,25 @@ function Alunos() {
   }
 
   const alunoDelete = async () => {
-    await axios.delete(baseUrl + "/" + alunoSelecionado.id)
-      .then(response => {
-        setData(data.filter(aluno => aluno.id !== response.data));
-        abrirFecharModalExcluir();
-        alunoGet(); // Forçar atualização
-      }).catch(error => console.log(error));
+    // 1. Vamos ver se a função foi chamada
+    console.log("--- INICIANDO EXCLUSÃO ---");
+    
+    // 2. Vamos ver qual ID o React está tentando apagar
+    console.log("ID Selecionado:", alunoSelecionado && alunoSelecionado.id);
+    
+    // 3. Vamos ver a URL completa
+    const urlCompleta = baseUrl + "/" + (alunoSelecionado && alunoSelecionado.id);
+    console.log("URL da Requisição:", urlCompleta);
+
+    await axios.delete(urlCompleta)
+    .then(response => {
+      console.log("Sucesso! Resposta:", response);
+      // Filtra a lista para tirar o aluno deletado
+      setData(data.filter(aluno => aluno.id !== alunoSelecionado.id));
+      abrirFecharModalExcluir();
+    }).catch(error => {
+      console.log("ERRO NO AXIOS:", error);
+    })
   }
 
   const selecionarAluno = (aluno, caso) => {
