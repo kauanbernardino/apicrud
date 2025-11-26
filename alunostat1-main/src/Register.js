@@ -20,7 +20,7 @@ function Register() {
     };
 
     try {
-      const url = 'https://api-escola-hroh.onrender.com/';
+      const url = "https://api-escola-hroh.onrender.com/api/Auth/registrar";
       await axios.post(url, dadosRegistro);
       
       setSucesso(true);

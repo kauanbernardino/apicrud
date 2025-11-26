@@ -18,7 +18,7 @@ function Login() {
 
     try {
       // Endereço exato do seu Back-End
-      const url = 'https://api-escola-hroh.onrender.com/';
+      const url = "https://api-escola-hroh.onrender.com/api/Auth/login";
       const response = await axios.post(url, dadosLogin);
       
       // Se deu certo, salva o token e entra

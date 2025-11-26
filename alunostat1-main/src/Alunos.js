@@ -6,7 +6,7 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import logoCadastro from './assets/cadastro.png';
 
 function Alunos() {
-  const baseUrl = "https://api-escola-hroh.onrender.com/";
+  const baseUrl = "https://api-escola-hroh.onrender.com/api/Alunos";;
   const [data, setData] = useState([]);
   const [modalEditar, setModalEditar] = useState(false);
   const [modalIncluir, setModalIncluir] = useState(false);

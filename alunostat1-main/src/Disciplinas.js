@@ -6,7 +6,7 @@ import logoCadastro from './assets/cadastro.png';
 
 function Disciplinas() {
   
-  const baseUrl = "https://api-escola-hroh.onrender.com/";
+  const baseUrl = "https://api-escola-hroh.onrender.com/api/Disciplinas";
 
   const [data, setData] = useState([]);
   const [modalIncluir, setModalIncluir] = useState(false);
